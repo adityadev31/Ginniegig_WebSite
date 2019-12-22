@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+
+/* font-family: 'Cairo', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Aclonica', sans-serif;
+font-family: 'Vollkorn', serif; */
+
+
+/* N A V */
+
+.navBar{
+    width: 100vw;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.815);
+}
+.navBar .logo{
+    color: orange;
+    margin-left: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.navBar ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.navBar ul a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.788);
+    font-family: 'Poppins', sans-serif;
+    transition: all ease-in-out 0.3s;
+}
+.navBar ul a:hover{
+    color: rgba(255, 166, 0, 0.938);
+    font-size: 17px;
+}
+.navBar ul .loginIcon{
+    width: 38px;
+    height: 38px;
+    margin: 0px 10px 0px 20px;
+    padding: 0px;
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navBar ul .loginIcon:hover{
+    color: rgba(255, 166, 0, 0.938);
+    font-size: 30px;
+}
+
+
+/* N A V B A R 2 */
+.navBar2{
+    z-index: 4;
+    width: 100vw;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.815);
+}
+.navBar2 .logo2{
+    width: 100%;
+    text-align: center;
+    color: orange;
+}
+.menuBars{
+    color: rgba(255, 255, 255, 0.678);
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 5;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
+}
+.menuBars:hover{
+    font-size: 35px;
+    color: orange;
+    top: -6px;
+    left: 8px;
+}
+#sliderMenu{
+    margin: 0;
+    width: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    height: calc(100vh - 45px);
+    background-color: rgba(0, 0, 0, 0.788);
+    transition: cubic-bezier(0.06, 0.96, 0.6, 1.47) 0.4s;
+}
+#sliderMenu.active{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menuItems{
+    display: none;
+}
+#menuItems.active a{
+    color: rgba(255, 255, 255, 0.747);
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    transition: ease-in-out 0.3s;
+}
+#menuItems.active a:hover{
+    color: rgba(255, 166, 0, 0.87);
+    font-size: 25px;
+}
+#menuItems.active a:before{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid rgba(255, 166, 0, 0.87);
+    transition: linear all 0.4s;
+}
+#menuItems.active a:hover:before{
+    width: 100%;
+}
+#menuItems.active{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* M E D I A   Q U E R Y   N A V B A R*/
+@media only screen and (min-width: 655px){
+    .navBar2{
+        display: none;
+    }
+    #sliderMenu{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .navBar ul{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 655px){
+    .navBar{
+        display: none;
+    }
+}
+
+
+
+
+/* C A R O U S E L */
+
+#carouselBox{
+    width: 100%;
+    max-height: 425px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#carouselBox .screenBlack{
+    z-index: 1;
+    width: 100%;
+    background: linear-gradient(rgba(245, 241, 4, 0.507), rgba(243, 159, 4, 0.541), rgba(0, 0, 0, 0.671));
+}
+
+
+
+
+/* Popular Services */
+
+.popularServices .heading{
+    letter-spacing: 3px;
+    font-family: 'Vollkorn', serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+}
+.popularServices .card{
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 12px 20px 0px rgba(0,0,0,0.19);
+}
+
+
+
+/* B A N N E R */
+
+.Banner .part1 span{
+    font-size: 50px;
+    color: rgb(255, 166, 0);
+    text-shadow: 1px 2px 2px rgba(31, 30, 30, 0.829);
+}
+.Banner .part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Banner .part2 .imgContainer{
+    width: 80%;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 12px 20px 0px rgba(0,0,0,0.19);
+}
+.Banner .part2 .imgContainer img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px){
+    .Banner .part1{
+        text-align: center;
+    }
+    .Banner .part1 ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+}
+
+
+/*  A L L   S E R V I C E S */
+
+.mainServices .heading{
+    letter-spacing: 3px;
+    font-family: 'Vollkorn', serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+}
+.mainServices .card{
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 12px 20px 0px rgba(0,0,0,0.19);
+}
