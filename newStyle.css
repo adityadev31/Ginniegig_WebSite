@@ -6,6 +6,7 @@
 
 html, body{
     overflow-x: hidden;
+    width: 100vw;
 }
 
 
@@ -20,15 +21,27 @@ font-family: 'Vollkorn', serif; */
 .navBar{
     width: 100vw;
     height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.815);
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.3), 15px 15px 15px 15px rgba(0,0,0,0.5);
 }
-.navBar .logo{
+/* .navBar .logo{
     color: orange;
     margin-left: 25px;
+    text-shadow: 1px 1px 1px rgb(66, 66, 66);
     font-family: 'Poppins', sans-serif;
+} */
+.navBar .logo{
+    width: 155px;
+    height: 50px;
+    margin-left: 25px;
+
 }
 .navBar ul{
     width: 40%;
@@ -42,7 +55,7 @@ font-family: 'Vollkorn', serif; */
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.788);
+    color: rgb(133, 133, 133);
     font-family: 'Poppins', sans-serif;
     transition: all ease-in-out 0.3s;
 }
@@ -55,7 +68,7 @@ font-family: 'Vollkorn', serif; */
     height: 38px;
     margin: 0px 10px 0px 20px;
     padding: 0px;
-    color: rgba(255, 255, 255, 0.842);
+    color: rgb(196, 196, 196);
     font-size: 25px;
     display: flex;
     align-items: center;
@@ -72,27 +85,37 @@ font-family: 'Vollkorn', serif; */
     z-index: 4;
     width: 100vw;
     height: 45px;
-    background-color: rgba(0, 0, 0, 0.815);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.3), 15px 15px 15px 15px rgba(0,0,0,0.5);
 }
 .navBar2 .logo2{
     width: 100%;
-    text-align: center;
-    color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navBar2 .logo2 img{
+    width: 155px;
+    height: 50px;
+    margin-right: 10%;
 }
 .menuBars{
-    color: rgba(255, 255, 255, 0.678);
+    color: rgb(196, 196, 196);
     font-size: 30px;
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 20px;
     z-index: 5;
-    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.2s;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.1s;
 }
 .menuBars:hover{
     font-size: 35px;
     color: orange;
-    top: -6px;
-    left: 8px;
+    top: -5px;
+    left: 20px;
 }
 #sliderMenu{
     margin: 0;
@@ -102,7 +125,7 @@ font-family: 'Vollkorn', serif; */
     left: 0px;
     z-index: 3;
     height: calc(100vh - 45px);
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgb(255, 255, 255);
     transition: cubic-bezier(0.06, 0.96, 0.6, 1.47) 0.4s;
 }
 #sliderMenu.active{
@@ -115,11 +138,11 @@ font-family: 'Vollkorn', serif; */
     display: none;
 }
 #menuItems.active a{
-    color: rgba(255, 255, 255, 0.747);
+    color: rgba(122, 122, 122, 0.747);
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 3px;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.15s;
 }
 #menuItems.active a:hover{
     color: rgba(255, 166, 0, 0.87);
@@ -185,12 +208,111 @@ font-family: 'Vollkorn', serif; */
     width: 100%;
     background: linear-gradient(rgba(245, 241, 4, 0.507), rgba(243, 159, 4, 0.541), rgba(0, 0, 0, 0.671));
 }
+.carousel-indicators{
+    z-index: 1;
+}
+
+ @media only screen and (min-width: 1155px){
+    .carousel-control-next {
+        right: 0;
+        top: -250px;
+    }
+    .carousel-control-prev {
+        left: 0;
+        top: -250px;
+    }
+}
+@media only screen and (min-width: 660px){
+    .carousel-indicators{
+        bottom: 30px;
+    }
+} 
+@media only screen and (min-width: 702px){
+    .carousel-indicators{
+        bottom: 50px;
+    }
+} 
+@media only screen and (min-width: 740px){
+    .carousel-indicators{
+        bottom: 80px;
+    }
+} 
+@media only screen and (min-width: 778px){
+    .carousel-indicators{
+        bottom: 120px;
+    }
+} 
+@media only screen and (min-width: 843px){
+    .carousel-indicators{
+        bottom: 180px;
+    }
+} 
+@media only screen and (min-width: 928px){
+    .carousel-indicators{
+        bottom: 250px;
+    }
+} 
+@media only screen and (min-width: 1047px){
+    .carousel-indicators{
+        bottom: 350px;
+    }
+} 
+@media only screen and (min-width: 1182px){
+    .carousel-indicators{
+        bottom: 400px;
+    }
+} 
+@media only screen and (min-width: 1257px){
+    .carousel-indicators{
+        bottom: 470px;
+    }
+} 
+
+
+
+
+/* N E E D  W O R K   D O N E */
+.needWorkDone{
+    margin-top: 80px;
+    margin-bottom: 120px;
+    padding-top: 30px;
+}
+.needWorkDone h2{
+    margin-bottom: 80px;
+    letter-spacing: 3px;
+    font-family: 'Vollkorn', serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+}
+.needWorkDone .iconBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50% 50%;
+    background-color: orange;
+    margin: 0px auto 50px auto;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 12px 20px 0px rgba(0,0,0,0.19);
+}
+.needWorkDone .iconBox .fa{
+    font-size: 7vw;
+    color: white;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.4);
+}
+
+
+
 
 
 
 
 /* Popular Services */
 
+.popularServices{
+    margin-top: 80px;
+    margin-bottom: 120px;
+} 
 .popularServices .heading{
     letter-spacing: 3px;
     font-family: 'Vollkorn', serif;
@@ -237,11 +359,83 @@ font-family: 'Vollkorn', serif; */
 
 /*  A L L   S E R V I C E S */
 
-.mainServices .heading{
+.mainServices{
+    margin-top: 120px;
+    margin-bottom: 120px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(252, 185, 2, 0.589), rgba(224, 221, 6, 0.555), rgba(0,0,0,0.7)), url('img/carousel/LG-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.mainServices h2{
     letter-spacing: 3px;
+    word-spacing: 5px;
+    margin-top:50px;
+    margin-bottom: 40px;
     font-family: 'Vollkorn', serif;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+    text-shadow: 1px 1px 1px rgba(218, 214, 214, 0.596);
 }
-.mainServices .card{
+.mainServices .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.mainServices .col-12 .imgCard{
+    width: 20vw;
+    height: 23vw;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 12px 20px 0px rgba(0,0,0,0.19);
+
 }
+.mainServices .col-12 .imgCard h4{
+    position: absolute;
+    bottom: 1.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Vollkorn', serif;
+}
+.mainServices .col-12 .imgCard .imgBox{
+    width: 20vw;
+    height: 16vw; 
+    overflow: hidden;
+}
+.mainServices .col-12 .imgCard .imgBox img{
+    width: 25vw;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.6s;
+}
+.mainServices .col-12 .imgCard .imgBox img:hover{
+    transform: scale(2);
+    cursor: pointer;
+}
+.allServButton{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (orientation: portrait){
+    .mainServices .col-12 .imgCard{
+        width: 40vw;
+        height: 45vw;           
+    }
+    .mainServices .col-12 .imgCard h4{
+        bottom: 2.5vw;
+    }
+    .mainServices .col-12 .imgCard .imgBox{
+        width: 40vw;
+        height: 32vw;
+    }
+    .mainServices .col-12 .imgCard .imgBox img{
+        width: 50vw;
+    }
+} 
